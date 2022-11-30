@@ -1,0 +1,11 @@
+.app-container {
+  padding: 0 1rem;
+  // max-width: 80%;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 5rem);
+  position: relative;
+}

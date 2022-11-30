@@ -1,0 +1,36 @@
+.header-container {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container {
+  height: 4rem;
+
+  img {
+    height: 100%;
+  }
+}
+
+.links-container {
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  font-weight: bold;
+
+  .link {
+    color: #B4B4B4;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &.active {
+      color: #7A63FF;
+    }
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+}

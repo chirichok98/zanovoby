@@ -1,0 +1,13 @@
+<div class="header-container">
+  <div class="logo-container">
+    <a routerLink="/">
+      <img src="assets/logo.svg">
+    </a>
+  </div>
+  <div class="links-container">
+    <a *ngFor="let page of PAGES_CONFIG" [routerLink]="page.path" class="link" routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact:true}">
+      {{page.title}}
+    </a>
+  </div>
+</div>
