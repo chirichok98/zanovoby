@@ -1,1 +1,16 @@
-<p>process works!</p>
+<div class="page-container">
+  <div class="page-title">Как мы это делаем?</div>
+  <div class="page-description">Тут мы расскажем, какие этапы проходят твои шузы, когда попадают на реинкарнацию в
+    ZANOVO.</div>
+  <div class="steps-container">
+    <div *ngFor="let step of STEPS_CONFIG; let odd = odd" class="step-container" [ngClass]="{'reverse': odd}">
+      <div class="step-image-container">
+        <img [src]="step.imageUrl">
+      </div>
+      <div class="step-text-container">
+        <div class="step-title">{{step.title}}</div>
+        <div class="step-description">{{step.description}}</div>
+      </div>
+    </div>
+  </div>
+</div>

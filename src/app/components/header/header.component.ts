@@ -4,7 +4,6 @@ const PAGES_CONFIG = [
   { title: 'Главная', path: '/' },
   { title: 'Процесс', path: '/process' },
   { title: 'Цены', path: '/prices' },
-  { title: 'О нас', path: '/about-us' },
 ]
 
 @Component({

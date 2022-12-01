@@ -4,7 +4,6 @@ import { MainComponent } from 'src/app/pages/main/main.component';
 
 const routes: Routes = [
   { path: 'process', loadChildren: () => import('./pages/process/process.module').then(m => m.ProcessModule) },
-  { path: 'about-us', loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule) },
   { path: 'prices', loadChildren: () => import('./pages/prices/prices.module').then(m => m.PricesModule) },
   { path: '', component: MainComponent },
   { path: '**', component: MainComponent },
