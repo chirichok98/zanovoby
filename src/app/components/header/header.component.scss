@@ -1,7 +1,8 @@
 .header-container {
+  width: 70vw;
+  margin: auto;
   padding-top: .5rem;
   padding-bottom: .5rem;
-
   display: flex;
   justify-content: space-between;
 }
@@ -26,7 +27,7 @@
     text-transform: uppercase;
 
     &.active {
-      color: #7A63FF;
+      color: #EF75FD;
     }
 
     &:not(:first-child) {
@@ -42,5 +43,5 @@
   font-weight: 400;
   padding: .5rem 1rem;
   background-color: #7A63FF;
-  color: #FFFFFF;
+  color: #E7E7E7;
 }

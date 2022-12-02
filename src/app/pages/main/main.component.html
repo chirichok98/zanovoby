@@ -1,6 +1,18 @@
 <app-welcome></app-welcome>
-<app-price-view></app-price-view>
-<div class="delivery-and-loyalty">
-  <app-delivery class="delivery"></app-delivery>
-  <app-loyalty class="loyalty"></app-loyalty>
+<div class="container-xl">
+  <app-price-view></app-price-view>
+  <div class="delivery-and-loyalty">
+    <app-delivery class="delivery"></app-delivery>
+    <app-loyalty class="loyalty"></app-loyalty>
+  </div>
+  <app-past-works class="past-works"></app-past-works>
+</div>
+<div class="maps-container">
+  <iframe
+    style="filter: invert(90%)"
+    [src]="mapsURL | safe"
+    width="100%"
+    height="500"
+    frameborder="0"
+  ></iframe>
 </div>

@@ -1,7 +1,7 @@
 .delivery-container {
   height: 25rem;
   width: 100%;
-  min-width: 25rem;
+  min-width: 15rem;
 
   border: 1px solid #555555;
 
@@ -18,7 +18,7 @@
   padding: 1rem;
 
   .title {
-    color: #B4B4B4;
+    color: #E7E7E7;
     text-transform: uppercase;
     font-size: 1.25rem;
     margin: 0 1rem;
@@ -50,6 +50,10 @@
     font-size: 3rem;
     line-height: 3rem;
     color: #7A63FF;
+  }
+
+  .ten {
+    color: #EF75FD;
   }
 
   .text {
