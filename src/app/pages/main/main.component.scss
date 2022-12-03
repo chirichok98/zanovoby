@@ -1,7 +1,7 @@
 .delivery-and-loyalty {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: .5rem;
 
   margin: 6rem 0;
 
@@ -25,4 +25,18 @@
 .container-xl {
   width: 70vw;
   margin: auto;
+}
+
+/* Mobile View */
+@media screen and (min-width:250px) and (max-width:1024px) {
+  .container-xl {
+    width: 100vw;
+    padding: 0 1rem;
+  }
+}
+/* Mobile View */
+@media screen and (min-width:250px) and (max-width:820px) {
+  .delivery-and-loyalty {
+    grid-template-columns: 1fr;
+  }
 }

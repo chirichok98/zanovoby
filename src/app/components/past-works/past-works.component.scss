@@ -38,6 +38,7 @@
       height: auto;
       max-height: 100%;
       transition: opacity 1s ease-in-out;
+      object-fit: cover;
 
       &.img-front:hover {
         opacity: 0;

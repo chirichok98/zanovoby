@@ -20,8 +20,22 @@
   color: #969696;
 }
 
-::ng-deep .mat-tab-label {
-  height: 6rem !important;
+::ng-deep {
+  .mat-tab-label {
+    height: 6rem !important;
+  }
+
+  .mat-tab-header {
+    border-bottom: #969696;
+  }
+
+  .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+    border-color: #555555;
+  }
+
+  .mat-tab-header-pagination-chevron {
+    border-color: #969696;
+  }
 }
 
 .tab-label {
@@ -38,6 +52,7 @@
     text-transform: uppercase;
     font-size: .8rem;
     margin-top: .5rem;
+    padding: 0 .2rem;
   }
 }
 
@@ -156,12 +171,15 @@
       .price {
         color: #969696;
         font-size: 1rem;
+        line-height: 1rem;
         font-weight: bold;
         margin-right: .2rem;
       }
 
-      .from-to-text, .currency {
-        line-height: .7rem;
+      .from-to-text,
+      .currency {
+        font-size: .7rem;
+        line-height: 1rem;
       }
 
       .from-to-text {
@@ -182,13 +200,15 @@
 }
 
 .contact-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(1fr, 6);
+  grid-template-areas: "text text text email telegram viber";
   margin: 2rem;
   margin-top: 0;
+  gap: .5rem;
 
   .contact-text {
-    flex: 1;
+    grid-area: text;
     padding: .5rem;
     background-color: #EF75FD;
 
@@ -198,29 +218,69 @@
     }
   }
 
-  .contact-examples {
-    flex: 1;
+  .email {
+    grid-area: email;
+  }
+
+  .telegram {
+    grid-area: telegram;
+  }
+
+  .viber {
+    grid-area: viber;
+  }
+
+  .social {
+    min-height: 2rem;
+    padding: .5rem;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .social {
-      min-height: 2rem;
-      flex: 1;
-      margin-left: .5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    color: #969696;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #555555;
 
-      color: #969696;
-      text-decoration: none;
-      text-transform: uppercase;
-      border: 1px solid #555555;
+    cursor: pointer;
 
-      cursor: pointer;
-
-      &:hover {
-        background-color: #7A63FF;
-        color: #E7E7E7;
-      }
+    &:hover {
+      background-color: #7A63FF;
+      color: #E7E7E7;
     }
+  }
+}
+
+/* Mobile View */
+@media screen and (min-width:250px) and (max-width:1280px) {
+
+  .tab-label {
+    .image {
+      height: 2rem;
+    }
+  }
+
+  ::ng-deep {
+    .mat-tab-label {
+      height: 4rem !important;
+    }
+  }
+}
+
+/* Mobile View */
+@media screen and (min-width:250px) and (max-width:720px) {
+  .price-text-container {
+    font-size: 1.2rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 4);
+    grid-template-areas: 
+      "text"
+      "email"
+      "telegram" 
+      "viber";
   }
 }

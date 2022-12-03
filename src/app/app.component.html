@@ -1,7 +1,37 @@
-<div class="app-container">
+<div *ngIf="!isMobile" class="app-container">
   <app-header></app-header>
   <div class="app-content">
     <router-outlet></router-outlet>
   </div>
   <app-footer></app-footer>
 </div>
+<mat-drawer-container *ngIf="isMobile" class="app-container-mobile">
+  <mat-drawer #drawer class="sidenav-container" mode="over" [autoFocus]="false">
+    <div class="sidenav-header">
+      <div class="logo-container">
+        <a routerLink="/">
+          <img src="assets/logo.svg">
+        </a>
+      </div>
+      <div class="close" (click)="drawer.close()">
+        <mat-icon>close</mat-icon>
+      </div>
+    </div>
+    <div class="links-container">
+      <a *ngFor="let page of PAGES_CONFIG" [routerLink]="page.path" class="link" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}" (click)="drawer.close()">
+        {{page.title}}
+      </a>
+      <a rel="noreferrer" href="tel:+375296383203" class="call-us">
+        Позвонить
+      </a>
+    </div>
+  </mat-drawer>
+
+  <app-header (openDrawer)="onOpenDrawer()"></app-header>
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+
+</mat-drawer-container>

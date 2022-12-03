@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
-const PAGES_CONFIG = [
+export const PAGES_CONFIG = [
   { title: 'Главная', path: '/' },
   { title: 'Процесс', path: '/process' },
   { title: 'Цены', path: '/prices' },
@@ -11,10 +11,12 @@ const PAGES_CONFIG = [
   templateUrl: 'header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  @Output() openDrawer = new EventEmitter();
+
   PAGES_CONFIG = PAGES_CONFIG;
 
-  constructor() { }
-
-  ngOnInit() { }
+  open(): void {
+    this.openDrawer.emit();
+  }
 }

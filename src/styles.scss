@@ -9,28 +9,27 @@
 @include mat.core();
 
 $primary-palette: (
- 50: #e8eaf6,
- 100: #c5cae9,
- 200: #9fa8da,
- 300: #7986cb,
- 400: #7A63FF,
- 500: #7A63FF,
- 600: #7A63FF,
- 700: #7A63FF,
- 800: #7A63FF,
- 900: #7A63FF,
- contrast: (
-   50: rgba(black, 0.87),
-   100: rgba(black, 0.87),
-   200: rgba(black, 0.87),
-   300: white,
-   400: white,
-   500: white,
-   600: white,
-   700: white,
-   800: white,
-   900: white,
- )
+  50: #e8eaf6,
+  100: #c5cae9,
+  200: #9fa8da,
+  300: #7986cb,
+  400: #7A63FF,
+  500: #7A63FF,
+  600: #7A63FF,
+  700: #7A63FF,
+  800: #7A63FF,
+  900: #7A63FF,
+  contrast: (50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
 );
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
@@ -60,6 +59,14 @@ html,
 body {
   height: 100%;
   font-size: 20px;
+}
+
+/* Mobile View */
+@media screen and (min-width:250px) and (max-width:1280px) {
+  html,
+  body {
+    font-size: 16px;
+  }
 }
 
 * {

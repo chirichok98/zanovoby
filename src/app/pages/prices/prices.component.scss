@@ -3,3 +3,11 @@
   width: 70vw;
   margin: auto;
 }
+
+/* Mobile View */
+@media screen and (min-width:250px) and (max-width:1280px) {
+  .prices-container {
+    width: 100vw;
+    padding: 3rem 1rem;
+  }
+}
