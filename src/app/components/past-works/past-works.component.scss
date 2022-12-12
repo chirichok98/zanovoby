@@ -26,8 +26,9 @@
 
   .element {
     position: relative;
-    // max-height: 25rem;
-    min-height: 15rem;
+    max-height: 15rem;
+    max-width: 15rem;
+    aspect-ratio: 1;
     width: 100%;
 
     img {
@@ -54,15 +55,47 @@
 
   /* Mobile View */
   @media screen and (min-width:250px) and (max-width:520px) {
+    .title {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+
+    .sub-title {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
     .works-container {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 1fr;
+
+      .element {
+        max-height: 30rem;
+        max-width: 30rem;
+      }
     }
   }
 
   /* Tablet View */
   @media screen and (min-width:521px) and (max-width:1024px) {
+    .title {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    .sub-title {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
     .works-container {
       grid-template-columns: repeat(2, 1fr);
+
+      .element {
+        max-height: 30rem;
+        max-width: 30rem;
+      }
     }
   }
 }
