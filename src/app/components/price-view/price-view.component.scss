@@ -23,18 +23,11 @@
 ::ng-deep {
   .mat-tab-label {
     height: 6rem !important;
+    min-width: fit-content !important;
   }
 
   .mat-tab-header {
     border-bottom: #969696;
-  }
-
-  .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
-    border-color: #555555;
-  }
-
-  .mat-tab-header-pagination-chevron {
-    border-color: #969696;
   }
 }
 
@@ -127,12 +120,13 @@
     border-left: 1px solid #555555;
     border-bottom: 1px solid #555555;
 
+    font-size: .8rem;
+
     p {
       margin-bottom: 0;
     }
 
     .time {
-      font-size: .8rem;
       font-weight: bold;
     }
   }
@@ -179,7 +173,7 @@
       .from-to-text,
       .currency {
         font-size: .7rem;
-        line-height: 1rem;
+        line-height: .7rem;
       }
 
       .from-to-text {
@@ -252,7 +246,7 @@
   }
 }
 
-/* Mobile View */
+/* Tablet View */
 @media screen and (min-width:250px) and (max-width:1280px) {
 
   .tab-label {
@@ -269,18 +263,60 @@
 }
 
 /* Mobile View */
-@media screen and (min-width:250px) and (max-width:720px) {
-  .price-text-container {
+@media screen and (min-width:250px) and (max-width:800px) {
+  .tab-content {
+    margin: 1rem;
+  }
+
+  .price-text-container p {
     font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
   .contact-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto, 4);
-    grid-template-areas: 
+    grid-template-areas:
       "text"
       "email"
-      "telegram" 
+      "telegram"
       "viber";
+  }
+}
+
+/* Medium Mobile View */
+@media screen and (min-width:250px) and (max-width:650px) {
+
+  ::ng-deep {
+    .mat-tab-label {
+      height: 3rem !important;
+      padding: 0 .1rem !important;
+    }
+  }
+
+  .tab-label {
+    .image {
+      height: 1.5rem;
+    }
+
+    .text {
+      font-size: .6rem;
+      line-height: .6rem;
+      margin-top: .3rem;
+      padding: 0 .1rem;
+    }
+  }
+}
+
+/* Small Mobile View */
+@media screen and (min-width:250px) and (max-width:520px) {
+  .price-text-container p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  .service-timing {
+    font-size: .6rem !important;
+    line-height: 1rem !important;
   }
 }
