@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainModule } from './pages/main/main.module';
 import { MatIconModule } from '@angular/material/icon';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatSidenavModule,
     MatIconModule,
     BrowserAnimationsModule,
+    NgxGoogleAnalyticsModule.forRoot('G-YTMRZDZRGF'),
+    NgxGoogleAnalyticsRouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
