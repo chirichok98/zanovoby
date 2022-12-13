@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 
 export const PAGES_CONFIG = [
   { title: 'Главная', path: '/' },
@@ -16,7 +17,13 @@ export class HeaderComponent {
 
   PAGES_CONFIG = PAGES_CONFIG;
 
+  constructor(private readonly _gaService: GoogleAnalyticsService) {}
+
   open(): void {
     this.openDrawer.emit();
+  }
+
+  trackCall(): void {
+    this._gaService.event('phone_call', 'communication');
   }
 }
