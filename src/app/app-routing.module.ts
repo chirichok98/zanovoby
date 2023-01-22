@@ -5,8 +5,8 @@ import { MainComponent } from 'src/app/pages/main/main.component';
 const routes: Routes = [
   { path: 'process', loadChildren: () => import('./pages/process/process.module').then(m => m.ProcessModule) },
   { path: 'prices', loadChildren: () => import('./pages/prices/prices.module').then(m => m.PricesModule) },
-  { 
-    path: '', 
+  {
+    path: '',
     component: MainComponent,
     title: "Главная | Сникер Химчистка в Минске | Zanovo",
   },
