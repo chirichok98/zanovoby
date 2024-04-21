@@ -3,8 +3,22 @@
     <div class="block">
       <div class="title">Наш геструм в Минске</div>
       <div class="place-details">
-        <p><a href="https://goo.gl/maps/dhRYpxhsRftoNJTE7" target="_blank" (click)="trackCommunication('view_map')">ул. Короля, 51</a></p>
-        <p><a href="tel:+375445699222" target="_blank" (click)="trackCommunication('phone_call')">+375 44 56 99 222</a>&nbsp;</p>
+        <p>
+          <a
+            href="https://goo.gl/maps/dhRYpxhsRftoNJTE7"
+            target="_blank"
+            (click)="trackCommunication('view_map')"
+            >ул. Короля, 51</a
+          >
+        </p>
+        <p>
+          <a
+            href="tel:+375296383203"
+            target="_blank"
+            (click)="trackCommunication('phone_call')"
+            >+375 29 638 32 03</a
+          >&nbsp;
+        </p>
         <p>ПН - ПТ (10:00 - 20:00)</p>
         <p>СБ, ВС (10:00 - 16:00)</p>
       </div>
@@ -12,13 +26,32 @@
     <div class="block">
       <div class="title">Остались вопросы?</div>
       <div class="contacts">
-        <a href="mailto:zanovo.sh@gmail.com" rel="noreferrer" target="_blank" class="social" (click)="trackCommunication('email')">E-mail</a>
-        <a href="https://t.me/znvmnsk" rel="noreferrer" target="_blank" class="social" (click)="trackCommunication('telegram')">Telegram</a>
-        <a href="viber://chat?number=%2B375445699222" rel="noreferrer" target="_blank" class="social" (click)="trackCommunication('viber')">Viber</a>
+        <a
+          href="mailto:zanovo.sh@gmail.com"
+          rel="noreferrer"
+          target="_blank"
+          class="social"
+          (click)="trackCommunication('email')"
+          >E-mail</a
+        >
+        <a
+          href="https://t.me/znvmnsk"
+          rel="noreferrer"
+          target="_blank"
+          class="social"
+          (click)="trackCommunication('telegram')"
+          >Telegram</a
+        >
+        <a
+          href="viber://chat?number=%2B375445699222"
+          rel="noreferrer"
+          target="_blank"
+          class="social"
+          (click)="trackCommunication('viber')"
+          >Viber</a
+        >
       </div>
     </div>
   </div>
-  <div class="copyright">
-    &copy; Zanovo {{year}}. All Rights Reserved.
-  </div>
+  <div class="copyright">&copy; Zanovo {{ year }}. All Rights Reserved.</div>
 </div>

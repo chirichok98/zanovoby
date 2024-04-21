@@ -17,6 +17,7 @@
 
   .works-container {
     margin: 3rem auto;
+    margin-bottom: 1rem;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -97,5 +98,21 @@
         max-width: 30rem;
       }
     }
+  }
+}
+
+.more-inst-link {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.more-inst-text {
+  padding: .5rem;
+  background-color: #7A63FF;
+  cursor: pointer;
+
+  p {
+    margin: 0;
+    text-align: center;
   }
 }

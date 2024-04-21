@@ -73,11 +73,11 @@
 
   .services {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 3rem auto;
     grid-template-areas:
-      "title title timing"
-      "list list price";
+      "title title title timing timing"
+      "list list list price price";
     border: 1px solid #555555;
     // box-shadow: 4px 4px 10px 0px rgba(122, 99, 255, 0.75);
   }
@@ -88,10 +88,10 @@
 
   .additional-service {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "list list price";
+      "list list list price price";
     border: 1px solid #555555;
     border-top: 0;
   }

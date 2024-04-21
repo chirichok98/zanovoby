@@ -5,7 +5,7 @@ import { PricesComponent } from './prices.component';
 const routes: Routes = [{
   path: '',
   component: PricesComponent,
-  title: "Цены | Сникер Химчистка в Минске | Zanovo",
+  title: "Прайс | Сникер Химчистка в Минске | Zanovo",
 }];
 
 @NgModule({

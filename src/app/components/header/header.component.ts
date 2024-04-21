@@ -4,7 +4,7 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
 export const PAGES_CONFIG = [
   { title: 'Главная', path: '/' },
   { title: 'Процесс', path: '/process' },
-  { title: 'Цены', path: '/prices' },
+  { title: 'Прайс', path: '/prices' },
 ]
 
 @Component({
