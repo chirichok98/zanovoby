@@ -8,10 +8,18 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
 })
 export class FooterComponent {
   year = new Date().getFullYear();
-  
-  constructor(private readonly _gaService: GoogleAnalyticsService) {}
+
+  constructor(private readonly _gaService: GoogleAnalyticsService) { }
 
   trackCommunication(type: string): void {
     this._gaService.event(type, 'communication');
+  }
+
+  downloadOffer() {
+    const link = document.createElement('a');
+    link.href = 'assets/public-offer.doc';
+    link.download = 'Публичная_оферта.doc';
+    link.target = '_blank';
+    link.click();
   }
 }
