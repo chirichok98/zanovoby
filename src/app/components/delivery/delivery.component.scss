@@ -1,5 +1,5 @@
 .delivery-container {
-  height: 25rem;
+  height: 100%;
   width: 100%;
   min-width: 15rem;
 
@@ -18,7 +18,7 @@
   padding: 1rem;
 
   .title {
-    color: #E7E7E7;
+    color: #e7e7e7;
     text-transform: uppercase;
     font-size: 1.25rem;
     margin: 0 1rem;
@@ -32,9 +32,8 @@
 
 .content-container {
   padding: 1rem;
-  color: #B4B4B4;
+  color: #b4b4b4;
   font-size: 1rem;
-  height: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,7 +43,7 @@
     font-weight: bold;
 
     .price {
-      color: #E7E7E7;
+      color: #e7e7e7;
       font-size: 1.2rem;
     }
   }
@@ -59,7 +58,7 @@
 
     .post-example {
       height: 2rem;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
 
       img {
         height: 100%;
@@ -68,6 +67,8 @@
   }
 
   .posts {
+    font-size: 0.8rem;
+    // font-size: rem;
     text-align: center;
   }
 }
