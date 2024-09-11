@@ -17,8 +17,8 @@ export class FooterComponent {
 
   downloadOffer() {
     const link = document.createElement('a');
-    link.href = 'assets/public-offer.doc';
-    link.download = 'Публичная_оферта.doc';
+    link.href = 'assets/public_offer.pdf';
+    link.download = 'Публичная_оферта.pdf';
     link.target = '_blank';
     link.click();
   }
